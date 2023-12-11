@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>lazy</h2>
+          <pre><code><img src="picture.jpg" loading="lazy" />
+<iframe src="supplementary.html" loading="lazy"></iframe></code></pre>
+        </section>
+        <section>
+          <h2>fetchPriority attribute</h2>
+          <ul>
+            <li>
+              <pre><code><img fetchPriority="high" /></code></pre>
+            </li>
+            <li>
+              <pre><code><img fetchPriority="low" /></code></pre>
+            </li>
+            <li>
+              <pre><code><img fetchPriority="auto" /></code></pre>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>&lt;math&gt;</h2>
+          <div style="display: flex">
+            <div>
+              <pre><code data-line-numbers data-ln-start-from="1"><p>
+		The infinite sum
+		<math display="block">
+			<!-- <mrow> groups together 
+				any number of sub-expressions -->
+			<mrow>
+				<munderover>
+					<!-- <mo> - operator -->
+					<mo>∑</mo>
+					<mrow>
+						<!-- <mi> - Identifiers: variables, 
+							function names, symbolic constants -->
+						<mi>n</mi>
+						<mo>=</mo>
+						<!-- <mn> - numeric literal -->
+						<mn>1</mn>
+					</mrow>
+					<mrow>
+						<mo>+</mo>
+						<mn>∞</mn>
+					</mrow>
+				</munderover>
+				<!-- <mfrac> displays fractions -->
+				<mfrac>
+					<mn>1</mn>
+					  <!-- <msup> attaches a superscript to a base: 
+							1st element - base, 2nd - superscript -->
+					<msup>
+						<mi>n</mi>
+						<mn>2</mn>
+					</msup>
+				</mfrac>
+			</mrow>
+		</math>
+		is equal to the real number
+		<math display="inline">
+			<mfrac>
+				<msup>
+					<mi>π</mi>
+					<mn>2</mn>
+				</msup>
+				<mn>6</mn>
+			</mfrac></math>
+	</p>
+										</code></pre>
+            </div>
+            <div>
+              <p>
+                The infinite sum
+                <math display="block">
+                  <mrow>
+                    <!-- <mrow> groups together any number of sub-expressions -->
+                    <munderover>
+                      <mo>∑</mo>
+                      <!-- <mo> - operator -->
+                      <mrow>
+                        <mi>n</mi>
+                        <!-- <mi> - Identifiers: variables, function names, symbolic constants -->
+                        <mo>=</mo>
+                        <mn>1</mn>
+                        <!-- <mn> - numeric literal -->
+                      </mrow>
+                      <mrow>
+                        <mo>+</mo>
+                        <mn>∞</mn>
+                      </mrow>
+                    </munderover>
+                    <mfrac>
+                      <mn>1</mn>
+                      <msup>
+                        <!-- attaches a superscript to a base: 1st element - base, 2nd - superscript -->
+                        <mi>n</mi>
+                        <mn>2</mn>
+                      </msup>
+                    </mfrac>
+                  </mrow>
+                </math>
+                is equal to the real number
+                <math display="inline">
+                  <mfrac>
+                    <msup>
+                      <mi>π</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mn>6</mn>
+                  </mfrac></math>
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+					<h2>controlslist attribute</h2>
+          <table>
+            <tr>
+              <td>
+                <h6>
+                  No controlslist settings
+                </h6>
+                <video width="400" src="./video.mp4" controls></video>
+              </td>
+              <td>
+                <h6>
+                  controlslist="nofullscreen"
+                </h6>
+                <video
+                  width="400"
+                  src="./video.mp4"
+                  controls
+                  controlslist="nofullscreen"
+                ></video>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h6>
+                  controlslist="nodownload"
+                </h6>
+                <video
+                  width="400"
+                  src="./video.mp4"
+                  controls
+                  controlslist="nodownload"
+                ></video>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>&lt;search&gt;</h2>
+          <table>
+            <tr>
+              <td>
+                <h5>
+                  &lt;form role="search"&gt;
+                </h5>
+                <form role="search" method="get" action="/search">
+                  <input type="search" name="search-text" />
+                  <button>Search</button>
+                </form>
+                <pre><code data-line-numbers data-ln-start-from="1"><form role="search" method="get" action="/search">
+	<input type="search" name="search-text" />
+	<button>Search</button>
+</form>
+								</code></pre>
+              </td>
+              <td>
+                <h5>&lt;search&gt;</h5>
+                <search role="search">
+                  <form method="get" action="/search">
+                    <input type="search" name="search-text" />
+                    <button>Search</button>
+                  </form>
+                </search>
+                <pre><code data-line-numbers data-ln-start-from="1"><search role="search">
+	<form method="get" action="/search">
+		<input type="search" name="search-text" />
+		<button>Search</button>
+	</form>
+</search>
+								</code></pre>
+              </td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h2>HTML imports</h2>
+          <pre>
+            <code><script type="module">
+  import { TabList } from "./tablist.html" with { type: 'html' };
+  customElements.define("tab-list", TabList);
+</script></code>
+          </pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
